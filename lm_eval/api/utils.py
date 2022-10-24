@@ -3,7 +3,7 @@ import pathlib
 import re
 import sys
 import torch
-from typing import Callable, Final, Iterable, List, Optional, Tuple, Union
+from typing import Callable, Iterable, List, Optional, Tuple, Union
 from collections.abc import MutableMapping
 from transformers import set_seed as transformers_set_seed
 
@@ -18,7 +18,8 @@ class ExitCodeError(Exception):
 # Reproducibility utils
 
 
-DEFAULT_SEED: Final[int] = 1234
+# DEFAULT_SEED: Final[int] = 1234
+DEFAULT_SEED = 1234
 
 
 def set_seed(seed: Optional[int] = DEFAULT_SEED):
