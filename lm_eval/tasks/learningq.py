@@ -58,3 +58,8 @@ class LEARNINGQ(PromptSourceTask):
         self.dataset = datasets.load_from_disk(
             path=self.DATASET_PATH,
         )
+    
+    def doc_to_text(self, doc):
+        return "Context: {}\n\nQuestion:".format(
+            doc["context"]
+        )
