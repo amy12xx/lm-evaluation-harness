@@ -29,7 +29,7 @@ _CITATION = """
 
 class LEARNINGQ(PromptSourceTask):
     VERSION = 0
-    DATASET_PATH = "/context/learningq"
+    DATASET_PATH = "learningq"
     DATASET_NAME = None
 
     def has_training_docs(self):
@@ -50,13 +50,18 @@ class LEARNINGQ(PromptSourceTask):
     def test_docs(self):
         return self.dataset["test"]
 
-    def download(self):
+    def download(
+        self,
+        data_dir: Optional[str] = None,
+        cache_dir: Optional[str] = None,
+        download_mode: Optional[str] = None,
+    ):
         """Downloads and returns the task dataset.
 
         NOTE: Override this method to download the dataset from a custom API.
         """
         self.dataset = datasets.load_from_disk(
-            path=self.DATASET_PATH,
+            "/content/" + self.DATASET_PATH,
         )
     
     def doc_to_text(self, doc):
