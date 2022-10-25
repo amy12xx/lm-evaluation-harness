@@ -29,7 +29,7 @@ _CITATION = """
 
 class LEARNINGQ(PromptSourceTask):
     VERSION = 0
-    DATASET_PATH = None
+    DATASET_PATH = "/context/learningq"
     DATASET_NAME = None
 
     def has_training_docs(self):
@@ -63,3 +63,6 @@ class LEARNINGQ(PromptSourceTask):
         return "Context: {}\n\nQuestion:".format(
             doc["context"]
         )
+    
+    def doc_to_target(self, doc):
+        return " {}".format(doc["question"])
