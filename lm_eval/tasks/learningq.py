@@ -32,7 +32,7 @@ _CITATION = """
 
 class LEARNINGQ(PromptSourceTask):
     VERSION = 0
-    DATASET_PATH = "learningq"
+    DATASET_PATH = "learningq_khanacademy"
     DATASET_NAME = None
 
     def has_training_docs(self):
@@ -45,13 +45,13 @@ class LEARNINGQ(PromptSourceTask):
         return True
 
     def training_docs(self):
-        return self.dataset
+        return self.dataset["train"]
 
     def validation_docs(self):
-        return self.dataset
+        return self.dataset["validation"]
 
     def test_docs(self):
-        return self.dataset
+        return self.dataset["test"]
 
     def download(
         self,
