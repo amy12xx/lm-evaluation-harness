@@ -33,7 +33,7 @@ from . import tydiqa
 from . import wino_bias
 from . import wmt
 from . import xquad
-from . import learningq
+from . import learningq_khanacademy
 
 
 logger = logging.getLogger(__name__)
@@ -216,7 +216,7 @@ TASK_REGISTRY = {
     ########################################################
     # JigSaw
     # "jigsaw_unintended_bias": jigsaw_unintended_bias.JigsawUnintendedBias,
-    "learningq": learningq.LEARNINGQ,
+    "learningq_khanacademy": learningq_khanacademy.LEARNINGQ,
     ########################################################
 }
 
