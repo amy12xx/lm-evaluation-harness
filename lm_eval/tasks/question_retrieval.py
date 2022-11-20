@@ -68,7 +68,7 @@ class QuestionRetrieval(PromptSourceTask):
     #     )
 
     def doc_to_target(self, doc):
-        return " {}".format(doc["question"][0])
+        return " {}".format(doc["questions"][0])
 
     def process_results(
         self, doc: dict, results: list
