@@ -93,7 +93,7 @@ class OpenAICompletionsLM(TokenLM):
         self._max_gen_toks = max_gen_toks
         self._batch_size = batch_size  # TODO: adaptive batch size
 
-        openai.api_key = os.environ["OPENAI_API_SECRET_KEY"]
+        openai.api_key = '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' #os.environ["OPENAI_API_SECRET_KEY"]
 
     @property
     def eot_token(self) -> int:

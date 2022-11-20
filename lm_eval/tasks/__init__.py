@@ -35,6 +35,7 @@ from . import wmt
 from . import xquad
 from . import learningq_khanacademy
 from . import squad
+from . import question_retrieval
 
 
 logger = logging.getLogger(__name__)
@@ -219,6 +220,7 @@ TASK_REGISTRY = {
     # "jigsaw_unintended_bias": jigsaw_unintended_bias.JigsawUnintendedBias,
     "learningq_khanacademy": learningq_khanacademy.LEARNINGQ,
     "squad": squad.SQUAD,
+    "question_retrieval": question_retrieval.QuestionRetrieval,
     ########################################################
 }
 
